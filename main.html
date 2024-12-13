@@ -1,38 +1,62 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tier List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .drop-zone {
+      border: 2px dashed gray;
+      padding: 20px;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background-color: #f8f8f8;
+    }
+
+    .item {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      background-color: coral;
+      border: 1px solid black;
+      cursor: grab;
+    }
+
+    #unranked-drop-zone {
+      border-color: black;
+      background-color: lightgray;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<div id="wrapper">
-		<section class="tier-section">
-			<h1>A Tier</h1>
-			<div class="drop-zone"></div>
-		</section>
-		<section class="tier-section">
-			<h1>B Tier</h1>
-			<div class="drop-zone"></div>
-		</section>
-		<section class="tier-section">
-			<h1>C Tier</h1>
-			<div class="drop-zone"></div>
-		</section>
-		<section class="tier-section" id="unranked-section">
-			<h1>Unranked</h1>
-			<div class="drop-zone" id="unranked-drop-zone">
-				<div draggable="true" id="blue" class="item"></div>
-				<div draggable="true" id="red" class="item"></div>
-				<div draggable="true" id="green" class="item"></div>
-			</div>
-		</section>
-	</div>
-    <script type="text/javascript" src="./script.js">
-</script>
+  <h1>Tier List</h1>
 
+  <div class="container">
+    <div class="drop-zone" id="unranked-drop-zone">
+      <div class="item" id="item-1"></div>
+      <div class="item" id="item-2"></div>
+      <div class="item" id="item-3"></div>
+    </div>
+
+    <div class="drop-zone" id="tier-a">Tier A</div>
+    <div class="drop-zone" id="tier-b">Tier B</div>
+    <div class="drop-zone" id="tier-c">Tier C</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
